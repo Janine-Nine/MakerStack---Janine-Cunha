@@ -48,3 +48,4 @@ prisma/dev.db
 # Turbo
 .turbo
 dist
+.env*.local
