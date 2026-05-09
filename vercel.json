@@ -1,0 +1,9 @@
+{
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "rootDirectory": "makerstack-saas",
+  "projectSettings": {
+    "nodeVersion": "18.x"
+  }
+}
