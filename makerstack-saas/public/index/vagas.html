@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vagas - Enviagora RH">
+  <title>Vagas - Enviagora RH</title>
+  
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/vagas.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div>
+      <div class="logo-area">
+        <img src="img/logo.png" alt="Logo">
+        <img src="img/marca.png" alt="Logo">
+        <h2>Enviagora</h2>
+      </div>
+
+      <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="dashboard.html">📊 Dashboard</a>
+        <a href="vagas.html" class="active">💼 Vagas</a>
+        <a href="candidatos.html">👥 Candidatos</a>
+        <a href="testes.html">📝 Testes</a>
+        <a href="organograma.html">📈 Organograma</a>
+        <a href="relatorio.html">📋 Relatórios</a>
+        <a href="ChatAssistente.html">💬 Chat Assistente</a>
+        <a href="Configuracoes.html">⚙️ Configurações</a>
+      </nav>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="plan-box">
+        <h4>Plano Enterprise</h4>
+        <p>✨ IA Psicométrica Ativa</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div>
+        <h1>Vagas</h1>
+        <p>Gerencie todas as vagas da sua empresa</p>
+      </div>
+      <button class="btn">+ Nova Vaga</button>
+    </div>
+
+    <!-- FILTERS & SEARCH -->
+    <div class="table-header">
+      <div class="search-box">
+        <input 
+          type="text" 
+          id="busca"
+          placeholder="🔍 Buscar vaga por título ou cargo..."
+        >
+      </div>
+
+      <div class="filters">
+        <button class="filter-btn active">Todas</button>
+        <button class="filter-btn">Júnior</button>
+        <button class="filter-btn">Pleno</button>
+        <button class="filter-btn">Sênior</button>
+      </div>
+    </div>
+
+    <!-- VAGAS LIST -->
+    <div class="lista-vagas">
+
+      <!-- CARD 1 -->
+      <div class="vaga-card">
+        <div class="vaga-topo">
+          <div class="info">
+            <h2>Product Manager</h2>
+            <p class="cargo">💼 CLT • Sênior</p>
+            <p class="tempo">📅 Aberta há 2 dias</p>
+          </div>
+          <div class="acao">
+            <a href="testes.html" class="btn-candidatar">
+              Me candidatar
+            </a>
+          </div>
+        </div>
+
+        <div class="bloco">
+          <h3>Sobre a empresa</h3>
+          <p>
+            Empresa inovadora focada em produtos digitais, squads ágeis e crescimento acelerado. Somos uma startup scale-up com forte presença no mercado.
+          </p>
+        </div>
+
+        <div class="bloco">
+          <h3>Faixa Salarial</h3>
+          <p>R$ 11.000 — R$ 15.000</p>
+        </div>
+
+        <div class="bloco">
+          <h3>Perguntas de Triagem</h3>
+          <ul>
+            <li>Já liderou times de produto?</li>
+            <li>Experiência com roadmap e OKRs?</li>
+            <li>Conhece metodologias ágeis?</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="vaga-card">
+        <div class="vaga-topo">
+          <div class="info">
+            <h2>Desenvolvedora Frontend</h2>
+            <p class="cargo">💻 CLT • Pleno</p>
+            <p class="tempo">📅 Aberta há 5 dias</p>
+          </div>
+          <div class="acao">
+            <a href="testes.html" class="btn-candidatar">
+              Me candidatar
+            </a>
+          </div>
+        </div>
+
+        <div class="bloco">
+          <h3>Sobre a empresa</h3>
+          <p>
+            Desenvolvemos soluções web inovadoras com React, TypeScript e tecnologias modernas. Time colaborativo com foco em qualidade.
+          </p>
+        </div>
+
+        <div class="bloco">
+          <h3>Faixa Salarial</h3>
+          <p>R$ 8.000 — R$ 12.000</p>
+        </div>
+
+        <div class="bloco">
+          <h3>Requisitos</h3>
+          <ul>
+            <li>3+ anos de experiência com React</li>
+            <li>Conhecimento em TypeScript</li>
+            <li>Experience com testes unitários</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="vaga-card">
+        <div class="vaga-topo">
+          <div class="info">
+            <h2>QA Tester</h2>
+            <p class="cargo">🧪 CLT • Júnior</p>
+            <p class="tempo">📅 Aberta há 4 dias</p>
+          </div>
+          <div class="acao">
+            <a href="testes.html" class="btn-candidatar">
+              Me candidatar
+            </a>
+          </div>
+        </div>
+
+        <div class="bloco">
+          <h3>Sobre a empresa</h3>
+          <p>
+            Empresa de software com foco em qualidade, testes automatizados e cultura colaborativa. Comprometida com excelência em produtos.
+          </p>
+        </div>
+
+        <div class="bloco">
+          <h3>Faixa Salarial</h3>
+          <p>R$ 4.500 — R$ 6.500</p>
+        </div>
+
+        <div class="bloco">
+          <h3>Diferencial</h3>
+          <ul>
+            <li>Disposição para aprender</li>
+            <li>Atenção aos detalhes</li>
+            <li>Trabalho em equipe</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="vaga-card">
+        <div class="vaga-topo">
+          <div class="info">
+            <h2>Analista de Dados</h2>
+            <p class="cargo">📊 CLT • Sênior</p>
+            <p class="tempo">📅 Aberta há 8 dias</p>
+          </div>
+          <div class="acao">
+            <a href="testes.html" class="btn-candidatar">
+              Me candidatar
+            </a>
+          </div>
+        </div>
+
+        <div class="bloco">
+          <h3>Sobre a empresa</h3>
+          <p>
+            Transformamos dados em decisões. Trabalhamos com BI, dashboards e análises preditivas para empresas do Fortune 500.
+          </p>
+        </div>
+
+        <div class="bloco">
+          <h3>Faixa Salarial</h3>
+          <p>R$ 12.000 — R$ 18.000</p>
+        </div>
+
+        <div class="bloco">
+          <h3>Stack Esperado</h3>
+          <ul>
+            <li>SQL avançado</li>
+            <li>Python ou R para análise</li>
+            <li>Experiência com Tableau ou Power BI</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <div class="footer-logo">
+        <img src="img/logo.png" alt="Enviagora Logo">
+        <span style="font-size: 1.2rem; font-weight: bold;">Enviagora</span>
+      </div>
+      <p>Plataforma de RH com Psicometria e IA para empresas que buscam os melhores talentos.</p>
+      <div class="footer-social">
+        <a href="#" title="LinkedIn">💼</a>
+        <a href="#" title="Instagram">📷</a>
+        <a href="#" title="Facebook">📘</a>
+        <a href="#" title="Twitter">🐦</a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h3>Plataforma</h3>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="vagas.html">Vagas</a>
+      <a href="candidatos.html">Candidatos</a>
+      <a href="testes.html">Testes</a>
+      <a href="relatorio.html">Relatórios</a>
+      <a href="ChatAssistente.html">Chat Assistente</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Empresa</h3>
+      <a href="organograma.html">Organograma</a>
+      <a href="Configuracoes.html">Configurações</a>
+      <a href="#">Sobre Nós</a>
+      <a href="#">Contato</a>
+      <a href="#">Suporte</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Recursos</h3>
+      <a href="#">DISC + Eneagrama</a>
+      <a href="#">16 Personalidades</a>
+      <a href="#">Match IA</a>
+      <a href="#">Relatórios PDF</a>
+      <a href="#">Integração API</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2024 Enviagora RH. Todos os direitos reservados. | Desenvolvido com ❤️ para RH do futuro.</p>
+  </div>
+</footer>
+
+<script src="js/vagas.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

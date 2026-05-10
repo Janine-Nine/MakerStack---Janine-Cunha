@@ -1,0 +1,8 @@
+# Vercel Build Ignore File
+# Este arquivo está vazio para que TODOS os arquivos sejam inclusos no deploy
+
+# Se você quiser ignorar algo específico, adicione aqui
+# Por exemplo:
+# node_modules/
+# .next/
+# .git/

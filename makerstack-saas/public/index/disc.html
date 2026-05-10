@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Teste DISC - Enviagora RH">
+  <title>Teste DISC - Enviagora RH</title>
+
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/testes.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div>
+      <div class="logo-area">
+        <img src="img/logo.png" alt="Logo">
+        <img src="img/marca.png" alt="Logo">
+        <h2>Enviagora</h2>
+      </div>
+
+      <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="dashboard.html">📊 Dashboard</a>
+        <a href="vagas.html">💼 Vagas</a>
+        <a href="candidatos.html">👥 Candidatos</a>
+        <a href="testes.html" class="active">📝 Testes</a>
+        <a href="organograma.html">📈 Organograma</a>
+        <a href="relatorio.html">📋 Relatórios</a>
+        <a href="ChatAssistente.html">💬 Chat Assistente</a>
+        <a href="Configuracoes.html">⚙️ Configurações</a>
+      </nav>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="plan-box">
+        <h4>Plano Enterprise</h4>
+        <p>✨ IA Psicométrica Ativa</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div>
+        <h1>Teste DISC</h1>
+        <p>Avaliação comportamental profissional</p>
+      </div>
+      <a href="testes.html" class="btn">← Voltar aos Testes</a>
+    </div>
+
+    <!-- TEST INFO -->
+    <div class="test-info-card">
+      <div class="test-header">
+        <div class="test-icon">🎯</div>
+        <div>
+          <h2>DISC - Análise Comportamental</h2>
+          <p>Identifica os 4 principais estilos comportamentais: Dominância, Influência, Estabilidade e Conformidade</p>
+        </div>
+      </div>
+
+      <div class="test-details">
+        <div class="detail-item">
+          <strong>⏱️ Duração:</strong> 15-20 minutos
+        </div>
+        <div class="detail-item">
+          <strong>📊 Questões:</strong> 24 afirmações
+        </div>
+        <div class="detail-item">
+          <strong>🎯 Objetivo:</strong> Avaliar perfil comportamental profissional
+        </div>
+        <div class="detail-item">
+          <strong>📈 Aplicação:</strong> Recrutamento, desenvolvimento de liderança, gestão de equipes
+        </div>
+      </div>
+
+      <div class="test-description">
+        <h3>Como funciona o teste DISC?</h3>
+        <p>O teste DISC avalia quatro dimensões principais do comportamento:</p>
+        <ul>
+          <li><strong>Dominância (D):</strong> Foco em resultados, assertividade, competitividade</li>
+          <li><strong>Influência (I):</strong> Comunicação, persuasão, trabalho em equipe</li>
+          <li><strong>Estabilidade (S):</strong> Paciência, confiabilidade, trabalho consistente</li>
+          <li><strong>Conformidade (C):</strong> Precisão, análise, atenção aos detalhes</li>
+        </ul>
+      </div>
+
+      <div class="test-benefits">
+        <h3>Benefícios para RH:</h3>
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <span class="benefit-icon">🎯</span>
+            <span>Match cultural preciso</span>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-icon">👥</span>
+            <span>Gestão de conflitos</span>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-icon">📈</span>
+            <span>Desenvolvimento de liderança</span>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-icon">🤝</span>
+            <span>Melhor comunicação</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-actions">
+        <button class="btn primary" onclick="startDISC()">🚀 Iniciar Teste DISC</button>
+        <button class="btn secondary" onclick="viewSampleReport()">📊 Ver Exemplo de Relatório</button>
+      </div>
+    </div>
+
+  </main>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <div class="footer-logo">
+        <img src="img/logo.png" alt="Enviagora Logo">
+        <span style="font-size: 1.2rem; font-weight: bold;">Enviagora</span>
+      </div>
+      <p>Plataforma de RH com Psicometria e IA para empresas que buscam os melhores talentos.</p>
+      <div class="footer-social">
+        <a href="#" title="LinkedIn">💼</a>
+        <a href="#" title="Instagram">📷</a>
+        <a href="#" title="Facebook">📘</a>
+        <a href="#" title="Twitter">🐦</a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h3>Plataforma</h3>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="vagas.html">Vagas</a>
+      <a href="candidatos.html">Candidatos</a>
+      <a href="testes.html">Testes</a>
+      <a href="relatorio.html">Relatórios</a>
+      <a href="ChatAssistente.html">Chat Assistente</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Empresa</h3>
+      <a href="organograma.html">Organograma</a>
+      <a href="Configuracoes.html">Configurações</a>
+      <a href="#">Sobre Nós</a>
+      <a href="#">Contato</a>
+      <a href="#">Suporte</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Recursos</h3>
+      <a href="#">DISC + Eneagrama</a>
+      <a href="#">16 Personalidades</a>
+      <a href="#">Match IA</a>
+      <a href="#">Relatórios PDF</a>
+      <a href="#">Integração API</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Enviagora RH. Todos os direitos reservados. | Desenvolvido com ❤️ para RH do futuro.</p>
+  </div>
+</footer>
+
+<script>
+function startDISC() {
+  alert('Funcionalidade: Iniciar teste DISC\n\nEm breve será implementado o teste completo com:\n- 24 questões comportamentais\n- Análise em tempo real\n- Relatório personalizado\n- Integração com IA');
+}
+
+function viewSampleReport() {
+  alert('Funcionalidade: Visualizar relatório exemplo\n\nO relatório incluirá:\n- Perfil comportamental completo\n- Pontuações em D, I, S, C\n- Recomendações de carreira\n- Compatibilidade com cargos\n- Sugestões de desenvolvimento');
+}
+</script>
+
+<script src="app.js"></script>
+</body>
+</html>
+        Analiso cuidadosamente
+      </label>
+    </div>
+
+    <div class="question">
+      <h3>2. O que mais combina com você?</h3>
+
+      <label class="option">
+        <input type="radio" name="q2" value="D">
+        Liderança
+      </label>
+
+      <label class="option">
+        <input type="radio" name="q2" value="I">
+        Comunicação
+      </label>
+
+      <label class="option">
+        <input type="radio" name="q2" value="S">
+        Cooperação
+      </label>
+
+      <label class="option">
+        <input type="radio" name="q2" value="C">
+        Organização
+      </label>
+    </div>
+
+    <button onclick="resultadoDISC()">
+      Ver Resultado
+    </button>
+
+    <div class="result" id="resultado"></div>
+
+  </div>
+
+</div>
+
+<script>
+
+function resultadoDISC(){
+
+  let respostas = document.querySelectorAll("input[type='radio']:checked");
+
+  let scores = {
+    D:0,
+    I:0,
+    S:0,
+    C:0
+  };
+
+  respostas.forEach(r=>{
+    scores[r.value]++;
+  });
+
+  let perfil = Object.keys(scores).reduce((a,b)=>
+    scores[a] > scores[b] ? a : b
+  );
+
+  let texto = "";
+
+  if(perfil === "D"){
+    texto = "🔥 Dominância — Perfil líder e competitivo.";
+  }
+
+  if(perfil === "I"){
+    texto = "🎤 Influência — Perfil comunicativo e persuasivo.";
+  }
+
+  if(perfil === "S"){
+    texto = "🤝 Estabilidade — Perfil colaborativo e paciente.";
+  }
+
+  if(perfil === "C"){
+    texto = "📊 Conformidade — Perfil analítico e detalhista.";
+  }
+
+  document.getElementById("resultado").innerHTML = texto;
+
+}
+
+</script>
+
+</body>
+</html>

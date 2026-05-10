@@ -1,0 +1,701 @@
+/* ===========================
+   GLOBAL STYLES - MAKERSTACK RH
+   =========================== */
+
+/* CSS Custom Properties - Color Palette */
+:root {
+  --primary: #C4FF57;
+  --secondary: #597048;
+  --background: #F5F7F0;
+  --accent: #FF9E6E;
+  --info: #7BB3B0;
+  --gray: #8D9999;
+  --dark: #4A5452;
+  --white: #FFFFFF;
+
+  /* Text Colors */
+  --text-primary: var(--dark);
+  --text-secondary: var(--gray);
+  --text-light: var(--white);
+
+  /* Background Colors */
+  --bg-primary: var(--background);
+  --bg-secondary: var(--white);
+  --bg-accent: var(--primary);
+
+  /* Border Colors */
+  --border-light: #E5E7EB;
+  --border-medium: var(--gray);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(74, 84, 82, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(74, 84, 82, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(74, 84, 82, 0.1);
+
+  /* Transitions */
+  --transition-fast: all 0.15s ease;
+  --transition-normal: all 0.3s ease;
+  --transition-slow: all 0.5s ease;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Layout Components */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border-light);
+  padding: 24px;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-md);
+}
+
+.sidebar .logo-area {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.sidebar .logo-area img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: var(--text-secondary);
+  border-radius: var(--radius-md);
+  transition: var(--transition-fast);
+  font-weight: 500;
+}
+
+.sidebar nav a:hover {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.sidebar nav a.active {
+  background: var(--primary);
+  color: var(--dark);
+  font-weight: 600;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  margin-left: 280px;
+  padding: 32px;
+  background: var(--bg-primary);
+}
+
+/* Header */
+.header {
+  background: var(--bg-secondary);
+  padding: 24px 32px;
+  border-radius: var(--radius-lg);
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.header h1 {
+  color: var(--text-primary);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+/* Cards */
+.card {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--dark);
+}
+
+.btn-primary:hover {
+  background: #B8F54D;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: var(--secondary);
+  color: var(--white);
+}
+
+.btn-secondary:hover {
+  background: #4A5F3A;
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: var(--white);
+}
+
+.btn-accent:hover {
+  background: #FF8A5A;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: var(--dark);
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  transition: var(--transition-fast);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(196, 255, 87, 0.1);
+}
+
+/* Tables */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.table th {
+  background: var(--gray);
+  color: var(--white);
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+}
+
+.table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--text-primary);
+}
+
+.table tbody tr:hover {
+  background: var(--bg-primary);
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Footer Styles */
+.footer {
+  background: var(--dark);
+  color: var(--white);
+  padding: 40px 0 20px;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.footer-section h3 {
+  color: var(--primary);
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.footer-section p,
+.footer-section a {
+  color: var(--gray);
+  text-decoration: none;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  display: block;
+  transition: var(--transition-fast);
+}
+
+.footer-section a:hover {
+  color: var(--primary);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: var(--gray);
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-fast);
+}
+
+.footer-links a:hover {
+  background: var(--primary);
+  color: var(--dark);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--gray);
+  margin-top: 30px;
+  padding-top: 20px;
+  text-align: center;
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.footer-logo img {
+  height: 30px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.footer-social a {
+  color: var(--gray);
+  font-size: 1.5rem;
+  transition: var(--transition-fast);
+}
+
+.footer-social a:hover {
+  color: var(--primary);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+}
+
+.status-badge.pending {
+  background: rgba(255, 158, 110, 0.2);
+  color: #CC5729;
+}
+
+.status-badge.rejected {
+  background: rgba(141, 153, 153, 0.2);
+  color: var(--dark);
+}
+
+.status-badge.interview {
+  background: rgba(123, 179, 176, 0.2);
+  color: #4A7B78;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 16px;
+  }
+
+  main {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .layout {
+    flex-direction: column;
+  }
+
+  .table {
+    font-size: 14px;
+  }
+
+  .table th,
+  .table td {
+    padding: 12px 8px;
+  }
+}
+
+/* ===========================
+   CANDIDATOS PAGE STYLES
+   =========================== */
+
+.candidatos-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.candidatos-table thead {
+  background: var(--gray-100);
+  border-bottom: 2px solid var(--gray-200);
+}
+
+.candidatos-table th {
+  text-align: left;
+  padding: 16px 20px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.candidatos-table tbody tr {
+  border-bottom: 1px solid var(--gray-200);
+  transition: var(--transition-fast);
+}
+
+.candidatos-table tbody tr:hover {
+  background: var(--gray-50);
+}
+
+.candidatos-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.candidatos-table td {
+  padding: 16px 20px;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.candidate-name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+}
+
+.candidate-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.match-score {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.match-score.high {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--success);
+}
+
+.match-score.medium {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--warning);
+}
+
+.match-score.low {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--error);
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.status-badge.approved {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--success);
+}
+
+.status-badge.analyzing {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--warning);
+}
+
+.status-badge.interview {
+  background: rgba(124, 58, 237, 0.1);
+  color: var(--primary);
+}
+
+.status-badge.rejected {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--error);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  padding: 6px 12px;
+  border: 1px solid var(--gray-200);
+  background: white;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.action-btn:hover {
+  background: var(--gray-100);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* ===========================
+   FILTERS
+   =========================== */
+
+.candidates-filter {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.filter-tag {
+  padding: 8px 16px;
+  background: var(--gray-100);
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.filter-tag:hover {
+  background: var(--primary-50);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.filter-tag.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+/* ===========================
+   RESPONSIVIDADE
+   =========================== */
+
+@media (max-width: 1024px) {
+  .candidates-filter {
+    gap: 8px;
+  }
+  
+  .filter-tag {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .candidatos-table {
+    font-size: 0.85rem;
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .candidatos-table thead {
+    display: none;
+  }
+  
+  .candidatos-table tr {
+    display: block;
+    margin-bottom: 16px;
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    padding: 16px;
+  }
+  
+  .candidatos-table td {
+    display: block;
+    padding: 8px 0;
+    text-align: left;
+  }
+  
+  .candidatos-table td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    color: var(--text-secondary);
+    display: inline-block;
+    width: 120px;
+  }
+  
+  .candidate-name {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .actions {
+    gap: 4px;
+  }
+  
+  .action-btn {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .candidatos-table tr {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .candidatos-table td {
+    padding: 6px 0;
+    font-size: 0.85rem;
+  }
+  
+  .candidate-avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 0.85rem;
+  }
+  
+  .candidates-filter {
+    gap: 6px;
+  }
+}

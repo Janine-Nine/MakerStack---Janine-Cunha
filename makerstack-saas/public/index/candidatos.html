@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Candidatos - Enviagora RH">
+  <title>Candidatos - Enviagora RH</title>
+  
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/candidatos.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div>
+      <div class="logo-area">
+        <img src="img/logo.png" alt="Logo">
+        <img src="img/marca.png" alt="Logo">
+        <h2>Enviagora</h2>
+      </div>
+
+    <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="dashboard.html">📊 Dashboard</a>
+        <a href="vagas.html">💼 Vagas</a>
+        <a href="candidatos.html" class="active">👥 Candidatos</a>
+        <a href="testes.html">📝 Testes</a>
+        <a href="organograma.html">📈 Organograma</a>
+        <a href="relatorio.html">📋 Relatórios</a>
+        <a href="ChatAssistente.html">💬 Chat Assistente</a>
+        <a href="Configuracoes.html">⚙️ Configurações</a>
+      </nav>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="plan-box">
+        <h4>Plano Enterprise</h4>
+        <p>✨ IA Psicométrica Ativa</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div>
+        <h1>Candidatos</h1>
+        <p>Visualize o perfil detalhado dos candidatos</p>
+      </div>
+      <button class="btn">📥 Importar Candidatos</button>
+    </div>
+
+    <!-- FILTERS -->
+    <div class="candidates-filter">
+      <button class="filter-tag active">Todos</button>
+      <button class="filter-tag">Aprovados</button>
+      <button class="filter-tag">Em análise</button>
+      <button class="filter-tag">Entrevista</button>
+      <button class="filter-tag">Rejeitados</button>
+    </div>
+
+    <!-- TABLE -->
+    <table class="candidatos-table">
+      <thead>
+        <tr>
+          <th>Candidato</th>
+          <th>Vaga</th>
+          <th>Match IA</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td data-label="Candidato">
+            <div class="candidate-name">
+              <div class="candidate-avatar"><img src="img/avatars/avatar2.png" alt="Maria Silva"></div>
+              <div>
+                <strong>Maria Silva</strong>
+                <p style="font-size: 0.85rem; color: var(--text-secondary);">maria@email.com</p>
+              </div>
+            </div>
+          </td>
+          <td data-label="Vaga">Desenvolvedora Frontend</td>
+          <td data-label="Match">
+            <div class="match-score high">95%</div>
+          </td>
+          <td data-label="Status">
+            <div class="status-badge approved">✓ Aprovada</div>
+          </td>
+          <td data-label="Ações">
+            <div class="actions">
+              <button class="action-btn">👁️ Ver</button>
+              <button class="action-btn">📧 E-mail</button>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Candidato">
+            <div class="candidate-name">
+              <div class="candidate-avatar"><img src="img/avatars/avatar1.png" alt="João Souza"></div>
+              <div>
+                <strong>João Souza</strong>
+                <p style="font-size: 0.85rem; color: var(--text-secondary);">joao@email.com</p>
+              </div>
+            </div>
+          </td>
+          <td data-label="Vaga">Analista de Dados</td>
+          <td data-label="Match">
+            <div class="match-score medium">78%</div>
+          </td>
+          <td data-label="Status">
+            <div class="status-badge analyzing">⏳ Em análise</div>
+          </td>
+          <td data-label="Ações">
+            <div class="actions">
+              <button class="action-btn">👁️ Ver</button>
+              <button class="action-btn">📧 E-mail</button>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Candidato">
+            <div class="candidate-name">
+              <div class="candidate-avatar"><img src="img/avatars/avatar3.png" alt="Lucas Pereira"></div>
+              <div>
+                <strong>Lucas Pereira</strong>
+                <p style="font-size: 0.85rem; color: var(--text-secondary);">lucas.pereira@email.com</p>
+              </div>
+            </div>
+          </td>
+          <td data-label="Vaga">Analista de Recursos Humanos</td>
+          <td data-label="Match">
+            <div class="match-score low">62%</div>
+          </td>
+          <td data-label="Status">
+            <div class="status-badge interview">🕒 Entrevista</div>
+          </td>
+          <td data-label="Ações">
+            <div class="actions">
+              <button class="action-btn">👁️ Ver</button>
+              <button class="action-btn">📧 E-mail</button>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Candidato">
+            <div class="candidate-name">
+              <div class="candidate-avatar"><img src="img/avatars/avatar4.png" alt="Ana Costa"></div>
+              <div>
+                <strong>Ana Costa</strong>
+                <p style="font-size: 0.85rem; color: var(--text-secondary);">ana@email.com</p>
+              </div>
+            </div>
+          </td>
+          <td data-label="Vaga">Product Designer</td>
+          <td data-label="Match">
+            <div class="match-score low">62%</div>
+          </td>
+          <td data-label="Status">
+            <div class="status-badge interview">📋 Entrevista</div>
+          </td>
+          <td data-label="Ações">
+            <div class="actions">
+              <button class="action-btn">👁️ Ver</button>
+              <button class="action-btn">📧 E-mail</button>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Candidato">
+            <div class="candidate-name">
+              <div class="candidate-avatar"><img src="img/avatars/avatar5.png" alt="Carlos Lima"></div>
+              <div>
+                <strong>Carlos Lima</strong>
+                <p style="font-size: 0.85rem; color: var(--text-secondary);">carlos@email.com</p>
+              </div>
+            </div>
+          </td>
+          <td data-label="Vaga">Backend Developer</td>
+          <td data-label="Match">
+            <div class="match-score medium">80%</div>
+          </td>
+          <td data-label="Status">
+            <div class="status-badge interview">📋 Entrevista</div>
+          </td>
+          <td data-label="Ações">
+            <div class="actions">
+              <button class="action-btn">👁️ Ver</button>
+              <button class="action-btn">📧 E-mail</button>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Candidato">
+            <div class="candidate-name">
+              <div class="candidate-avatar"><img src="img/avatars/avatar7.png" alt="Pedro Almeida"></div>
+              <div>
+                <strong>Pedro Almeida</strong>
+                <p style="font-size: 0.85rem; color: var(--text-secondary);">pedro@email.com</p>
+              </div>
+            </div>
+          </td>
+          <td data-label="Vaga">Desenvolvedor Full Stack</td>
+          <td data-label="Match">
+            <div class="match-score high">85%</div>
+          </td>
+          <td data-label="Status">
+            <div class="status-badge approved">✓ Aprovada</div>
+          </td>
+          <td data-label="Ações">
+            <div class="actions">
+              <button class="action-btn">👁️ Ver</button>
+              <button class="action-btn">📧 E-mail</button>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Candidato">
+            <div class="candidate-name">
+              <div class="candidate-avatar"><img src="img/avatars/avatar6.png" alt="Fernanda Martins"></div>
+              <div>
+                <strong>Fernanda Martins</strong>
+                <p style="font-size: 0.85rem; color: var(--text-secondary);">fernanda@email.com</p>
+              </div>
+            </div>
+          </td>
+          <td data-label="Vaga">Product Manager</td>
+          <td data-label="Match">
+            <div class="match-score high">88%</div>
+          </td>
+          <td data-label="Status">
+            <div class="status-badge analyzing">⏳ Em análise</div>
+          </td>
+          <td data-label="Ações">
+            <div class="actions">
+              <button class="action-btn">👁️ Ver</button>
+              <button class="action-btn">📧 E-mail</button>
+            </div>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </main>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <div class="footer-logo">
+        <img src="img/logo.png" alt="Enviagora Logo">
+        <span style="font-size: 1.2rem; font-weight: bold;">Enviagora</span>
+      </div>
+      <p>Plataforma de RH com Psicometria e IA para empresas que buscam os melhores talentos.</p>
+      <div class="footer-social">
+        <a href="#" title="LinkedIn">💼</a>
+        <a href="#" title="Instagram">📷</a>
+        <a href="#" title="Facebook">📘</a>
+        <a href="#" title="Twitter">🐦</a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h3>Plataforma</h3>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="vagas.html">Vagas</a>
+      <a href="candidatos.html">Candidatos</a>
+      <a href="testes.html">Testes</a>
+      <a href="relatorio.html">Relatórios</a>
+      <a href="ChatAssistente.html">Chat Assistente</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Empresa</h3>
+      <a href="organograma.html">Organograma</a>
+      <a href="Configuracoes.html">Configurações</a>
+      <a href="#">Sobre Nós</a>
+      <a href="#">Contato</a>
+      <a href="#">Suporte</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Recursos</h3>
+      <a href="#">DISC + Eneagrama</a>
+      <a href="#">16 Personalidades</a>
+      <a href="#">Match IA</a>
+      <a href="#">Relatórios PDF</a>
+      <a href="#">Integração API</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Enviagora RH. Todos os direitos reservados. | Desenvolvido com ❤️ para RH do futuro.</p>
+  </div>
+</footer>
+
+<script src="js/candidatos.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

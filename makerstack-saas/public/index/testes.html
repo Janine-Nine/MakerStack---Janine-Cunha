@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Testes Psicométricos - Enviagora RH">
+  <title>Testes Psicométricos - Enviagora RH</title>
+  
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/testes.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div>
+      <div class="logo-area">
+        <img src="img/logo.png" alt="Enviagora Logo">
+        <img src="img/marca.png" alt="Enviagora Marca">
+        <h2>Enviagora</h2>
+      </div>
+
+      <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="dashboard.html">📊 Dashboard</a>
+        <a href="vagas.html">💼 Vagas</a>
+        <a href="candidatos.html">👥 Candidatos</a>
+        <a href="testes.html" class="active">📝 Testes</a>
+        <a href="organograma.html">📈 Organograma</a>
+        <a href="relatorio.html">📋 Relatórios</a>
+        <a href="ChatAssistente.html">💬 Chat Assistente</a>
+        <a href="Configuracoes.html">⚙️ Configurações</a>
+      </nav>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="plan-box">
+        <h4>Plano Enterprise</h4>
+        <p>✨ IA Psicométrica Ativa</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div>
+        <h1>Testes Psicométricos</h1>
+        <p>Gerencie testes e acompanhe resultados em tempo real</p>
+      </div>
+      <button class="btn">+ Enviar Teste</button>
+    </div>
+
+    <!-- METRICS CARDS -->
+    <section class="cards">
+      <div class="card">
+        <h3>🔗 Links Ativos</h3>
+        <h2 id="links-ativos">23</h2>
+        <span>Aguardando preenchimento</span>
+      </div>
+
+      <div class="card">
+        <h3>✓ Concluídos</h3>
+        <h2 id="testes-concluidos">64</h2>
+        <span>+8 esta semana</span>
+      </div>
+
+      <div class="card">
+        <h3>⏳ Pendentes</h3>
+        <h2 id="testes-pendentes">18</h2>
+        <span>5 com prazo próximo</span>
+      </div>
+
+      <div class="card">
+        <h3>⏰ Expirados</h3>
+        <h2 id="testes-expirados">2</h2>
+        <span>Reenviados hoje</span>
+      </div>
+    </section>
+
+    <!-- TEST FILTERS -->
+    <div class="test-filters">
+      <div class="test-filter-container">
+        <button class="test-filter active" onclick="filterTests('todos')" title="Mostrar todos os testes disponíveis no sistema">
+          <span class="filter-icon">📋</span>
+          <span class="filter-text">Todos</span>
+          <span class="filter-desc">Ver tudo</span>
+        </button>
+      </div>
+      <div class="test-filter-container">
+        <a href="disc.html" class="test-filter" title="DISC - Avaliação comportamental completa. Mede Dominância, Influência, Estabilidade e Conformidade. Ideal para recrutamento, gestão de equipes e desenvolvimento profissional. 24 afirmações, resultado em 15 minutos.">
+          <span class="filter-icon">🎯</span>
+          <span class="filter-text">DISC</span>
+          <span class="filter-desc">Perfil comportamental</span>
+        </a>
+      </div>
+      <div class="test-filter-container">
+        <a href="eneagrama.html" class="test-filter" title="Eneagrama - Sistema ancestral de 9 tipos de personalidade. Identifica motivações profundas, padrões inconscientes e caminhos de crescimento. Essencial para liderança, coaching e desenvolvimento pessoal. 36 questões, análise completa.">
+          <span class="filter-icon">🔢</span>
+          <span class="filter-text">Eneagrama</span>
+          <span class="filter-desc">9 tipos de personalidade</span>
+        </a>
+      </div>
+      <div class="test-filter-container">
+        <a href="personalidades.html" class="test-filter" title="16 Personalidades MBTI - Avaliação completa baseada nas 4 dimensões: Extroversão/Introversão, Sensação/Intuição, Pensamento/Sentimento, Julgamento/Percepção. 60 questões para match preciso de carreira e compatibilidade profissional.">
+          <span class="filter-icon">🧠</span>
+          <span class="filter-text">16 Personalidades</span>
+          <span class="filter-desc">MBTI profissional</span>
+        </a>
+      </div>
+      <div class="test-filter-container">
+        <a href="customizado.html" class="test-filter" title="Testes Customizados - Avaliações específicas para sua empresa. Crie questões técnicas, comportamentais e culturais personalizadas. Inclui construtor visual, múltiplos tipos de pergunta e relatórios customizados.">
+          <span class="filter-icon">⚙️</span>
+          <span class="filter-text">Customizado</span>
+          <span class="filter-desc">Avaliações específicas</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- TABLE -->
+    <table class="testes-table">
+      <thead>
+        <tr>
+          <th>Candidato</th>
+          <th>Vaga</th>
+          <th>Tipo de Teste</th>
+          <th>Progresso</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td data-label="Candidato">
+            <div class="test-candidate">
+              <div class="test-avatar"><img src="img/avatar1.png" alt="João Souza"></div>
+              <div>
+                <strong>João Souza</strong>
+                <p style="font-size: 0.85rem; color: var(--text-secondary);">joao.silva@email.com</p>
+              </div>
+            </div>
+          </td>
+          <td data-label="Vaga">Desenvolvedor Full Stack</td>
+          <td data-label="Tipo">DISC + Eneagrama</td>
+          <td data-label="Progresso">
+            <div class="progress-container">
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill" style="width: 100%;"></div>
+              </div>
+              <div class="progress-text">100%</div>
+            </div>
+          </td>
+          <td data-label="Status">
+            <div class="test-status completed">✓ Concluído</div>
+          </td>
+          <td data-label="Ações">
+            <div class="test-actions">
+              <button class="test-action-btn view">👁️ Ver</button>
+              <button class="test-action-btn">📊 Relatório</button>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Candidato">
+            <div class="test-candidate">
+              <div class="test-avatar"><img src="img/avatar2.png" alt="Maria Silva"></div>
+              <div>
+                <strong>Maria Silva</strong>
+                <p style="font-size: 0.85rem; color: var(--text-secondary);">maria.santos@email.com</p>
+              </div>
+            </div>
+          </td>
+          <td data-label="Vaga">Product Manager</td>
+          <td data-label="Tipo">DISC + 16 Personalidades</td>
+          <td data-label="Progresso">
+            <div class="progress-container">
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill" style="width: 65%;"></div>
+              </div>
+              <div class="progress-text">65%</div>
+            </div>
+          </td>
+          <td data-label="Status">
+            <div class="test-status in-progress">⏳ Em andamento</div>
+          </td>
+          <td data-label="Ações">
+            <div class="test-actions">
+              <button class="test-action-btn">⏱️ Lembrete</button>
+              <button class="test-action-btn">🔗 Reenviar</button>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Candidato">
+            <div class="test-candidate">
+              <div class="test-avatar"><img src="img/avatar7.png" alt="Pedro Almeida"></div>
+              <div>
+                <strong>Pedro Almeida</strong>
+                <p style="font-size: 0.85rem; color: var(--text-secondary);">pedro.almeida@email.com</p>
+              </div>
+            </div>
+          </td>
+          <td data-label="Vaga">Analista de Dados</td>
+          <td data-label="Tipo">Eneagrama</td>
+          <td data-label="Progresso">
+            <div class="progress-container">
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill" style="width: 35%;"></div>
+              </div>
+              <div class="progress-text">35%</div>
+            </div>
+          </td>
+          <td data-label="Status">
+            <div class="test-status in-progress">⏳ Em andamento</div>
+          </td>
+          <td data-label="Ações">
+            <div class="test-actions">
+              <button class="test-action-btn">⏱️ Lembrete</button>
+              <button class="test-action-btn">🔗 Reenviar</button>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Candidato">
+            <div class="test-candidate">
+              <div class="candidate-avatar"><img src="img/avatar4.png" alt="Ana Costa"></div>
+              <div>
+                <strong>Ana Costa</strong>
+                <p style="font-size: 0.85rem; color: var(--text-secondary);">ana.costa@email.com</p>
+              </div>
+            </div>
+          </td>
+          <td data-label="Vaga">Product Designer</td>
+          <td data-label="Tipo">DISC</td>
+          <td data-label="Progresso">
+            <div class="progress-container">
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill" style="width: 0%;"></div>
+              </div>
+              <div class="progress-text">0%</div>
+            </div>
+          </td>
+          <td data-label="Status">
+            <div class="test-status pending">⏳ Pendente</div>
+          </td>
+          <td data-label="Ações">
+            <div class="test-actions">
+              <button class="test-action-btn">⏱️ Lembrete</button>
+              <button class="test-action-btn">🔗 Reenviar</button>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Candidato">
+            <div class="test-candidate">
+              <div class="candidate-avatar"><img src="img/avatar5.png" alt="Carlos Lima"></div>
+              <div>
+                <strong>Carlos Lima</strong>
+                <p style="font-size: 0.85rem; color: var(--text-secondary);">carlos.lima@email.com</p>
+              </div>
+            </div>
+          </td>
+          <td data-label="Vaga">Backend Developer</td>
+          <td data-label="Tipo">DISC + Eneagrama + 16 Personalidades</td>
+          <td data-label="Progresso">
+            <div class="progress-container">
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill" style="width: 100%;"></div>
+              </div>
+              <div class="progress-text">100%</div>
+            </div>
+          </td>
+          <td data-label="Status">
+            <div class="test-status completed">✓ Concluído</div>
+          </td>
+          <td data-label="Ações">
+            <div class="test-actions">
+              <button class="test-action-btn view">👁️ Ver</button>
+              <button class="test-action-btn">📊 Relatório</button>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Candidato">
+            <div class="test-candidate">
+              <div class="candidate-avatar"><img src="img/avatar6.png" alt="Fernanda Martins"></div>
+              <div>
+                <strong>Fernanda Martins</strong>
+                <p style="font-size: 0.85rem; color: var(--text-secondary);">fernanda.martins@email.com</p>
+              </div>
+            </div>
+          </td>
+          <td data-label="Vaga">Desenvolvedora Frontend</td>
+          <td data-label="Tipo">16 Personalidades</td>
+          <td data-label="Progresso">
+            <div class="progress-container">
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill" style="width: 0%;"></div>
+              </div>
+              <div class="progress-text">0%</div>
+            </div>
+          </td>
+          <td data-label="Status">
+            <div class="test-status expired">⏰ Expirado</div>
+          </td>
+          <td data-label="Ações">
+            <div class="test-actions">
+              <button class="test-action-btn">🔗 Reenviar</button>
+            </div>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </main>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <div class="footer-logo">
+        <img src="img/logo.png" alt="Enviagora Logo">
+        <span style="font-size: 1.2rem; font-weight: bold;">Enviagora</span>
+      </div>
+      <p>Plataforma de RH com Psicometria e IA para empresas que buscam os melhores talentos.</p>
+      <div class="footer-social">
+        <a href="#" title="LinkedIn">💼</a>
+        <a href="#" title="Instagram">📷</a>
+        <a href="#" title="Facebook">📘</a>
+        <a href="#" title="Twitter">🐦</a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h3>Plataforma</h3>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="vagas.html">Vagas</a>
+      <a href="candidatos.html">Candidatos</a>
+      <a href="testes.html">Testes</a>
+      <a href="relatorio.html">Relatórios</a>
+      <a href="ChatAssistente.html">Chat Assistente</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Empresa</h3>
+      <a href="organograma.html">Organograma</a>
+      <a href="Configuracoes.html">Configurações</a>
+      <a href="#">Sobre Nós</a>
+      <a href="#">Contato</a>
+      <a href="#">Suporte</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Recursos</h3>
+      <a href="#">DISC + Eneagrama</a>
+      <a href="#">16 Personalidades</a>
+      <a href="#">Match IA</a>
+      <a href="#">Relatórios PDF</a>
+      <a href="#">Integração API</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2024 Enviagora RH. Todos os direitos reservados. | Desenvolvido com ❤️ para RH do futuro.</p>
+  </div>
+</footer>
+
+<script src="js/testes.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

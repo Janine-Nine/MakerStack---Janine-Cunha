@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Testes Customizados - Enviagora RH">
+  <title>Testes Customizados - Enviagora RH</title>
+
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/testes.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div>
+      <div class="logo-area">
+        <img src="img/logo.png" alt="Logo">
+        <img src="img/marca.png" alt="Logo">
+        <h2>Enviagora</h2>
+      </div>
+
+      <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="dashboard.html">📊 Dashboard</a>
+        <a href="vagas.html">💼 Vagas</a>
+        <a href="candidatos.html">👥 Candidatos</a>
+        <a href="testes.html" class="active">📝 Testes</a>
+        <a href="organograma.html">📈 Organograma</a>
+        <a href="relatorio.html">📋 Relatórios</a>
+        <a href="ChatAssistente.html">💬 Chat Assistente</a>
+        <a href="Configuracoes.html">⚙️ Configurações</a>
+      </nav>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="plan-box">
+        <h4>Plano Enterprise</h4>
+        <p>✨ IA Psicométrica Ativa</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div>
+        <h1>Testes Customizados</h1>
+        <p>Crie avaliações específicas para sua empresa</p>
+      </div>
+      <a href="testes.html" class="btn">← Voltar aos Testes</a>
+    </div>
+
+    <!-- TEST INFO -->
+    <div class="test-info-card">
+      <div class="test-header">
+        <div class="test-icon">⚙️</div>
+        <div>
+          <h2>Testes Personalizados</h2>
+          <p>Crie avaliações específicas para seu processo seletivo, cultura organizacional e necessidades únicas da empresa</p>
+        </div>
+      </div>
+
+      <div class="test-details">
+        <div class="detail-item">
+          <strong>⏱️ Duração:</strong> Personalizável (5-30 minutos)
+        </div>
+        <div class="detail-item">
+          <strong>📊 Questões:</strong> Ilimitadas
+        </div>
+        <div class="detail-item">
+          <strong>🎯 Objetivo:</strong> Avaliação específica da empresa
+        </div>
+        <div class="detail-item">
+          <strong>📈 Aplicação:</strong> Recrutamento especializado, avaliação cultural, testes técnicos</div>
+      </div>
+
+      <div class="test-description">
+        <h3>Tipos de Questões Disponíveis:</h3>
+        <div class="question-types">
+          <div class="type-item">
+            <strong>📝 Resposta Curta</strong> - Perguntas abertas para respostas livres
+          </div>
+          <div class="type-item">
+            <strong>📋 Múltipla Escolha</strong> - Opções pré-definidas com única resposta
+          </div>
+          <div class="type-item">
+            <strong>☑️ Múltipla Seleção</strong> - Opções com múltiplas respostas possíveis
+          </div>
+          <div class="type-item">
+            <strong>📊 Escala Likert</strong> - Avaliação em escala de concordância
+          </div>
+          <div class="type-item">
+            <strong>⭐ Ranking</strong> - Ordenação de preferências
+          </div>
+          <div class="type-item">
+            <strong>📎 Upload de Arquivo</strong> - Submissão de documentos ou portfólio
+          </div>
+        </div>
+      </div>
+
+      <div class="test-benefits">
+        <h3>Benefícios para RH:</h3>
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <span class="benefit-icon">🎯</span>
+            <span>Avaliação precisa</span>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-icon">🏢</span>
+            <span>Cultura organizacional</span>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-icon">🛠️</span>
+            <span>Habilidades técnicas</span>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-icon">📈</span>
+            <span>Métricas personalizadas</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="custom-test-examples">
+        <h3>Exemplos de Aplicação:</h3>
+        <div class="examples-list">
+          <div class="example-item">
+            <strong>🧠 Teste Técnico</strong>
+            <p>Questões específicas sobre linguagens, frameworks e ferramentas técnicas</p>
+          </div>
+          <div class="example-item">
+            <strong>🏢 Fit Cultural</strong>
+            <p>Avaliação de valores, missão e visão da empresa</p>
+          </div>
+          <div class="example-item">
+            <strong>👥 Case Studies</strong>
+            <p>Simulações de situações reais do dia a dia profissional</p>
+          </div>
+          <div class="example-item">
+            <strong>💡 Inovação</strong>
+            <p>Avaliação de criatividade e pensamento estratégico</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-actions">
+        <button class="btn primary" onclick="createCustomTest()">🚀 Criar Teste Customizado</button>
+        <button class="btn secondary" onclick="viewTemplates()">📋 Ver Templates</button>
+      </div>
+    </div>
+
+  </main>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <div class="footer-logo">
+        <img src="img/logo.png" alt="Enviagora Logo">
+        <span style="font-size: 1.2rem; font-weight: bold;">Enviagora</span>
+      </div>
+      <p>Plataforma de RH com Psicometria e IA para empresas que buscam os melhores talentos.</p>
+      <div class="footer-social">
+        <a href="#" title="LinkedIn">💼</a>
+        <a href="#" title="Instagram">📷</a>
+        <a href="#" title="Facebook">📘</a>
+        <a href="#" title="Twitter">🐦</a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h3>Plataforma</h3>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="vagas.html">Vagas</a>
+      <a href="candidatos.html">Candidatos</a>
+      <a href="testes.html">Testes</a>
+      <a href="relatorio.html">Relatórios</a>
+      <a href="ChatAssistente.html">Chat Assistente</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Empresa</h3>
+      <a href="organograma.html">Organograma</a>
+      <a href="Configuracoes.html">Configurações</a>
+      <a href="#">Sobre Nós</a>
+      <a href="#">Contato</a>
+      <a href="#">Suporte</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Recursos</h3>
+      <a href="#">DISC + Eneagrama</a>
+      <a href="#">16 Personalidades</a>
+      <a href="#">Match IA</a>
+      <a href="#">Relatórios PDF</a>
+      <a href="#">Integração API</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Enviagora RH. Todos os direitos reservados. | Desenvolvido com ❤️ para RH do futuro.</p>
+  </div>
+</footer>
+
+<script>
+function createCustomTest() {
+  alert('Funcionalidade: Criar teste customizado\n\nEm breve será implementado o construtor de testes com:\n- Interface drag-and-drop\n- Múltiplos tipos de questão\n- Lógica condicional\n- Templates pré-configurados\n- Análise automática de respostas\n- Relatórios personalizados');
+}
+
+function viewTemplates() {
+  alert('Funcionalidade: Visualizar templates\n\nTemplates disponíveis:\n- Teste Técnico - Desenvolvimento\n- Avaliação Cultural\n- Case Study Empresarial\n- Teste de Lógica\n- Avaliação de Liderança\n- Teste de Conhecimentos Gerais');
+}
+</script>
+
+<script src="app.js"></script>
+</body>
+</html>

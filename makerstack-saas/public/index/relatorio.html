@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatórios</title>
+
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/relatorio.css">
+</head>
+
+<body>
+
+  <div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div>
+      <div class="logo-area">
+        <img src="img/logo.png" alt="Logo">
+        <img src="img/marca.png" alt="Logo">
+        <h2>Enviagora</h2>
+      </div>
+
+      <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="dashboard.html">📊 Dashboard</a>
+        <a href="vagas.html">💼 Vagas</a>
+        <a href="candidatos.html">👥 Candidatos</a>
+        <a href="testes.html">📝 Testes</a>
+        <a href="organograma.html">📈 Organograma</a>
+        <a href="relatorio.html" class="active">📋 Relatórios</a>
+        <a href="ChatAssistente.html">💬 Chat Assistente</a>
+        <a href="Configuracoes.html">⚙️ Configurações</a>
+      </nav>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="plan-box">
+        <h4>Plano Enterprise</h4>
+        <p>✨ IA Psicométrica Ativa</p>
+      </div>
+    </div>
+  </aside>
+
+  <main class="content">
+
+    <div class="topbar">
+      <div>
+        <h1>Relatórios Inteligentes</h1>
+        <p>Analise dados e gere relatórios em PDF</p>
+      </div>
+      <button class="btn">📥 Exportar PDF</button>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>👥 Candidatos</h3>
+        <h2 id="candidatos-total">142</h2>
+        <span>Inscritos no total</span>
+      </div>
+
+      <div class="card">
+        <h3>✓ Contratações</h3>
+        <h2 id="contratacoes-mes">27</h2>
+        <span>Confirmadas este mês</span>
+      </div>
+
+      <div class="card">
+        <h3>🤖 Match IA</h3>
+        <h2 id="match-ia">89%</h2>
+        <span>Precisão média</span>
+      </div>
+
+      <div class="card">
+        <h3>💼 Vagas</h3>
+        <h2 id="vagas-abertas">18</h2>
+        <span>Vagas abertas</span>
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <div class="footer-logo">
+        <img src="img/logo.png" alt="Enviagora Logo">
+        <span style="font-size: 1.2rem; font-weight: bold;">Enviagora</span>
+      </div>
+      <p>Plataforma de RH com Psicometria e IA para empresas que buscam os melhores talentos.</p>
+      <div class="footer-social">
+        <a href="#" title="LinkedIn">💼</a>
+        <a href="#" title="Instagram">📷</a>
+        <a href="#" title="Facebook">📘</a>
+        <a href="#" title="Twitter">🐦</a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h3>Plataforma</h3>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="vagas.html">Vagas</a>
+      <a href="candidatos.html">Candidatos</a>
+      <a href="testes.html">Testes</a>
+      <a href="relatorio.html">Relatórios</a>
+      <a href="ChatAssistente.html">Chat Assistente</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Empresa</h3>
+      <a href="organograma.html">Organograma</a>
+      <a href="Configuracoes.html">Configurações</a>
+      <a href="#">Sobre Nós</a>
+      <a href="#">Contato</a>
+      <a href="#">Suporte</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Recursos</h3>
+      <a href="#">DISC + Eneagrama</a>
+      <a href="#">16 Personalidades</a>
+      <a href="#">Match IA</a>
+      <a href="#">Relatórios PDF</a>
+      <a href="#">Integração API</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2024 Enviagora RH. Todos os direitos reservados. | Desenvolvido com ❤️ para RH do futuro.</p>
+  </div>
+</footer>
+
+<script src="js/relatorio.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

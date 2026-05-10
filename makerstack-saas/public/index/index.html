@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Enviagora - Plataforma de RH com Psicometria e IA">
+  <title>Login - Enviagora RH</title>
+  
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/login.css">
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="nav-logo">
+      <img src="img/logo.png" alt="Enviagora Logo">
+      <img src="img/marca.png" alt="Enviagora Marca">
+      <span>enviagora</span>
+    </div>
+    <div class="nav-links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="vagas.html">Vagas</a>
+      <a href="candidatos.html">Candidatos</a>
+      <a href="relatorio.html">Relatórios</a>
+      <a href="ChatAssistente.html">Chat</a>
+    </div>
+  </nav>
+
+<div class="login-container">
+
+  <!-- LEFT PANEL - HERO -->
+  <div class="left-panel">
+    <div class="brand">
+      <img src="img/logo.png" alt="Enviagora Logo" class="logo-lg">
+      <img src="img/marca.png" alt="Enviagora Marca" class="marca-lg">
+    </div>
+
+    <div class="hero-content">
+      <h1>
+        Plataforma de RH com
+        <span>Psicometria e IA</span>
+      </h1>
+
+      <p>
+        Testes psicológicos, análise inteligente e match perfeito para sua empresa crescer com os melhores talentos.
+      </p>
+
+      <ul>
+        <li>✓ DISC + Eneagrama + 16 Personalidades</li>
+        <li>✓ Match inteligente com vagas e culturas</li>
+        <li>✓ IA que entende pessoas de verdade</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- RIGHT PANEL - LOGIN FORM -->
+  <div class="right-panel">
+    <div class="login-card">
+      <h2>Bem-vindo de volta!</h2>
+      <p>Faça login para acessar sua conta</p>
+
+      <button class="google-btn" onclick="loginGoogle()">
+        🔵 Entrar com Google
+      </button>
+
+      <button class="email-btn" onclick="toggleForm()">
+        ✉️ Entrar com e-mail
+      </button>
+
+      <div class="divider">OU</div>
+
+      <form id="login-form">
+        <div>
+          <label for="email">E-mail</label>
+          <input 
+            type="email" 
+            id="email"
+            placeholder="seu@email.com"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="password">Senha</label>
+          <input 
+            type="password" 
+            id="password"
+            placeholder="••••••••"
+            required
+          >
+        </div>
+
+        <a href="#" class="forgot">Esqueceu sua senha?</a>
+
+        <button type="button" class="login-btn" onclick="handleLogin()">Entrar</button>
+      </form>
+
+      <div id="register-form" style="display: none;">
+        <h3>Criar nova conta</h3>
+        
+        <div>
+          <label for="reg-name">Nome Completo</label>
+          <input 
+            type="text" 
+            id="reg-name"
+            placeholder="Seu nome completo"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="reg-email">E-mail</label>
+          <input 
+            type="email" 
+            id="reg-email"
+            placeholder="seu@email.com"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="reg-password">Senha</label>
+          <input 
+            type="password" 
+            id="reg-password"
+            placeholder="••••••••"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="reg-confirm-password">Confirmar Senha</label>
+          <input 
+            type="password" 
+            id="reg-confirm-password"
+            placeholder="••••••••"
+            required
+          >
+        </div>
+
+        <button type="button" class="login-btn" onclick="handleRegister()">Criar Conta</button>
+      </div>
+
+      <div class="register-link">
+        <span id="toggle-text">Não tem conta? <a href="#" onclick="toggleForm(); return false;">Comece agora grátis</a></span>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <div class="footer-logo">
+        <img src="img/logo.png" alt="Enviagora Logo">
+        <span style="font-size: 1.2rem; font-weight: bold;">Enviagora</span>
+      </div>
+      <p>Plataforma de RH com Psicometria e IA para empresas que buscam os melhores talentos.</p>
+      <div class="footer-social">
+        <a href="#" title="LinkedIn">💼</a>
+        <a href="#" title="Instagram">📷</a>
+        <a href="#" title="Facebook">📘</a>
+        <a href="#" title="Twitter">🐦</a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h3>Plataforma</h3>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="vagas.html">Vagas</a>
+      <a href="candidatos.html">Candidatos</a>
+      <a href="testes.html">Testes</a>
+      <a href="relatorio.html">Relatórios</a>
+      <a href="ChatAssistente.html">Chat Assistente</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Empresa</h3>
+      <a href="organograma.html">Organograma</a>
+      <a href="Configuracoes.html">Configurações</a>
+      <a href="#">Sobre Nós</a>
+      <a href="#">Contato</a>
+      <a href="#">Suporte</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Recursos</h3>
+      <a href="#">DISC + Eneagrama</a>
+      <a href="#">16 Personalidades</a>
+      <a href="#">Match IA</a>
+      <a href="#">Relatórios PDF</a>
+      <a href="#">Integração API</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Enviagora RH. Todos os direitos reservados. | Desenvolvido com ❤️ para RH do futuro.</p>
+  </div>
+</footer>
+<script src="js/index-login.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

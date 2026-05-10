@@ -1,0 +1,109 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: makerstack_postgres
+    restart: always
+
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: makerstack_saas
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+    networks:
+      - makerstack_network
+
+  redis:
+    image: redis:7-alpine
+    container_name: makerstack_redis
+    restart: always
+
+    ports:
+      - "6379:6379"
+
+    networks:
+      - makerstack_network
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+
+    container_name: makerstack_api
+    restart: always
+
+    ports:
+      - "3333:3333"
+
+    environment:
+      NODE_ENV: development
+
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/makerstack_saas
+
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+
+      JWT_ACCESS_SECRET: supersecret
+      JWT_REFRESH_SECRET: supersecret
+
+      OPENAI_API_KEY: your_openai_key
+
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+      redis:
+        condition: service_started
+
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+    networks:
+      - makerstack_network
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+
+    container_name: makerstack_web
+    restart: always
+
+    ports:
+      - "3000:3000"
+
+    environment:
+      NODE_ENV: development
+      NEXT_PUBLIC_API_URL: http://localhost:3333
+
+    depends_on:
+      - api
+
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+
+    networks:
+      - makerstack_network
+
+volumes:
+  postgres_data:
+
+networks:
+  makerstack_network:
+    driver: bridge

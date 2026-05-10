@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dashboard - Enviagora RH">
+  <title>Dashboard - Enviagora RH</title>
+  
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/dashboard.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div>
+      <div class="logo-area">
+        <img src="img/logo.png" alt="Logo">
+        <img src="img/marca.png" alt="Logo">
+        <h2>Enviagora</h2>
+      </div>
+
+      <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="dashboard.html" class="active">📊 Dashboard</a>
+        <a href="vagas.html">💼 Vagas</a>
+        <a href="candidatos.html">👥 Candidatos</a>
+        <a href="testes.html">📝 Testes</a>
+        <a href="organograma.html">📈 Organograma</a>
+        <a href="relatorio.html">📋 Relatórios</a>
+        <a href="ChatAssistente.html">💬 Chat Assistente</a>
+        <a href="Configuracoes.html">⚙️ Configurações</a>
+      </nav>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="plan-box">
+        <h4>Plano Enterprise</h4>
+        <p>✨ IA Psicométrica Ativa</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div>
+        <h1>Dashboard</h1>
+        <p>Bem-vindo de volta, Janine! ✨</p>
+      </div>
+      <button class="btn" onclick="openNewVagaModal()">+ Nova Vaga</button>
+    </div>
+
+    <!-- METRICS CARDS -->
+    <section class="cards">
+      <div class="card">
+        <h3>💼 Vagas Ativas</h3>
+        <h2 id="vagas-ativas">12</h2>
+        <span>+4 esta semana</span>
+      </div>
+
+      <div class="card">
+        <h3>👥 Candidatos</h3>
+        <h2 id="candidatos-total">87</h2>
+        <span>+15 esta semana</span>
+      </div>
+
+      <div class="card">
+        <h3>📝 Testes Concluídos</h3>
+        <h2 id="testes-concluidos">64</h2>
+        <span>73% do total</span>
+      </div>
+
+      <div class="card">
+        <h3>🎯 Match Médio</h3>
+        <h2 id="match-medio">78</h2>
+        <span class="warning">+12% esta semana</span>
+      </div>
+    </section>
+
+    <!-- DASHBOARD GRID -->
+    <section class="dashboard-grid">
+
+      <!-- CHART BOX -->
+      <div class="chart-box">
+        <h3>📊 Vagas por Status</h3>
+
+        <div class="status-list">
+          <div class="status-item">
+            <div class="status-left">
+              <div class="status-color green"></div>
+              <span>Abertas</span>
+            </div>
+            <strong>8</strong>
+          </div>
+
+          <div class="status-item">
+            <div class="status-left">
+              <div class="status-color orange"></div>
+              <span>Em análise</span>
+            </div>
+            <strong>3</strong>
+          </div>
+
+          <div class="status-item">
+            <div class="status-left">
+              <div class="status-color purple"></div>
+              <span>Entrevista</span>
+            </div>
+            <strong>2</strong>
+          </div>
+
+          <div class="status-item">
+            <div class="status-left">
+              <div class="status-color dark"></div>
+              <span>Fechadas</span>
+            </div>
+            <strong>1</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACTIVITY BOX -->
+      <div class="activity-box">
+        <h3>🔔 Atividades Recentes</h3>
+
+        <ul class="activity-list">
+          <li class="activity-item">
+            <div class="activity-icon">📬</div>
+            <div class="activity-content">
+              <h4>Nova candidatura recebida</h4>
+              <span>há 2 horas</span>
+            </div>
+          </li>
+
+          <li class="activity-item">
+            <div class="activity-icon">✓</div>
+            <div class="activity-content">
+              <h4>João Silva concluiu teste DISC</h4>
+              <span>há 4 horas</span>
+            </div>
+          </li>
+
+          <li class="activity-item">
+            <div class="activity-icon">⭐</div>
+            <div class="activity-content">
+              <h4>Maria Santos foi recomendada pela IA</h4>
+              <span>há 6 horas</span>
+            </div>
+          </li>
+
+          <li class="activity-item">
+            <div class="activity-icon">📊</div>
+            <div class="activity-content">
+              <h4>Relatório de match gerado</h4>
+              <span>há 1 dia</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <div class="footer-logo">
+        <img src="img/logo.png" alt="Enviagora Logo">
+        <span style="font-size: 1.2rem; font-weight: bold;">Enviagora</span>
+      </div>
+      <p>Plataforma de RH com Psicometria e IA para empresas que buscam os melhores talentos.</p>
+      <div class="footer-social">
+        <a href="#" title="LinkedIn">💼</a>
+        <a href="#" title="Instagram">📷</a>
+        <a href="#" title="Facebook">📘</a>
+        <a href="#" title="Twitter">🐦</a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h3>Plataforma</h3>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="vagas.html">Vagas</a>
+      <a href="candidatos.html">Candidatos</a>
+      <a href="testes.html">Testes</a>
+      <a href="relatorio.html">Relatórios</a>
+      <a href="ChatAssistente.html">Chat Assistente</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Empresa</h3>
+      <a href="organograma.html">Organograma</a>
+      <a href="Configuracoes.html">Configurações</a>
+      <a href="#">Sobre Nós</a>
+      <a href="#">Contato</a>
+      <a href="#">Suporte</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Recursos</h3>
+      <a href="#">DISC + Eneagrama</a>
+      <a href="#">16 Personalidades</a>
+      <a href="#">Match IA</a>
+      <a href="#">Relatórios PDF</a>
+      <a href="#">Integração API</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Enviagora RH. Todos os direitos reservados. | Desenvolvido com ❤️ para RH do futuro.</p>
+  </div>
+</footer>
+
+<script src="js/dashboard.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="16 Personalidades - Enviagora RH">
+  <title>16 Personalidades - Enviagora RH</title>
+
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/testes.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div>
+      <div class="logo-area">
+        <img src="img/logo.png" alt="Logo">
+        <img src="img/marca.png" alt="Logo">
+        <h2>Enviagora</h2>
+      </div>
+
+      <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="dashboard.html">📊 Dashboard</a>
+        <a href="vagas.html">💼 Vagas</a>
+        <a href="candidatos.html">👥 Candidatos</a>
+        <a href="testes.html" class="active">📝 Testes</a>
+        <a href="organograma.html">📈 Organograma</a>
+        <a href="relatorio.html">📋 Relatórios</a>
+        <a href="ChatAssistente.html">💬 Chat Assistente</a>
+        <a href="Configuracoes.html">⚙️ Configurações</a>
+      </nav>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="plan-box">
+        <h4>Plano Enterprise</h4>
+        <p>✨ IA Psicométrica Ativa</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div>
+        <h1>16 Personalidades</h1>
+        <p>Teste MBTI completo e detalhado</p>
+      </div>
+      <a href="testes.html" class="btn">← Voltar aos Testes</a>
+    </div>
+
+    <!-- TEST INFO -->
+    <div class="test-info-card">
+      <div class="test-header">
+        <div class="test-icon">🧠</div>
+        <div>
+          <h2>16 Personalidades - Myers-Briggs Type Indicator</h2>
+          <p>Avaliação completa baseada nas 4 dimensões: Extroversão/Introversão, Sensação/Intuição, Pensamento/Sentimento, Julgamento/Percepção</p>
+        </div>
+      </div>
+
+      <div class="test-details">
+        <div class="detail-item">
+          <strong>⏱️ Duração:</strong> 10-15 minutos
+        </div>
+        <div class="detail-item">
+          <strong>📊 Questões:</strong> 60 afirmações
+        </div>
+        <div class="detail-item">
+          <strong>🎯 Objetivo:</strong> Identificar tipo de personalidade MBTI
+        </div>
+        <div class="detail-item">
+          <strong>📈 Aplicação:</strong> Recrutamento, desenvolvimento profissional, gestão de equipes</div>
+      </div>
+
+      <div class="test-description">
+        <h3>As 4 Dimensões do MBTI:</h3>
+        <div class="mbti-dimensions">
+          <div class="dimension-item">
+            <strong>E/I - Extroversão vs Introversão</strong>
+            <p>Como você ganha energia: com pessoas ou sozinho?</p>
+          </div>
+          <div class="dimension-item">
+            <strong>S/N - Sensação vs Intuição</strong>
+            <p>Como você processa informação: fatos concretos ou possibilidades?</p>
+          </div>
+          <div class="dimension-item">
+            <strong>T/F - Pensamento vs Sentimento</strong>
+            <p>Como você toma decisões: lógica objetiva ou valores pessoais?</p>
+          </div>
+          <div class="dimension-item">
+            <strong>J/P - Julgamento vs Percepção</strong>
+            <p>Como você lida com o mundo: estrutura organizada ou flexibilidade?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mbti-types">
+        <h3>Os 16 Tipos de Personalidade:</h3>
+        <div class="types-grid">
+          <div class="type-card">INTJ - Arquiteto</div>
+          <div class="type-card">ENTJ - Comandante</div>
+          <div class="type-card">INFJ - Advogado</div>
+          <div class="type-card">ENFJ - Protagonista</div>
+          <div class="type-card">ISTJ - Inspetor</div>
+          <div class="type-card">ESTJ - Executivo</div>
+          <div class="type-card">ISFJ - Defensor</div>
+          <div class="type-card">ESFJ - Cônsul</div>
+          <div class="type-card">INTP - Lógico</div>
+          <div class="type-card">ENTP - Inovador</div>
+          <div class="type-card">INFP - Mediador</div>
+          <div class="type-card">ENFP - Ativista</div>
+          <div class="type-card">ISTP - Virtuoso</div>
+          <div class="type-card">ESTP - Empreendedor</div>
+          <div class="type-card">ISFP - Aventureiro</div>
+          <div class="type-card">ESFP - Animador</div>
+        </div>
+      </div>
+
+      <div class="test-benefits">
+        <h3>Benefícios para RH:</h3>
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <span class="benefit-icon">🎯</span>
+            <span>Match de carreira preciso</span>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-icon">👥</span>
+            <span>Comunicação eficaz</span>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-icon">📈</span>
+            <span>Desenvolvimento profissional</span>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-icon">🤝</span>
+            <span>Gestão de equipes</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-actions">
+        <button class="btn primary" onclick="startMBTI()">🚀 Iniciar Teste 16 Personalidades</button>
+        <button class="btn secondary" onclick="viewSampleReport()">📊 Ver Exemplo de Relatório</button>
+      </div>
+    </div>
+
+  </main>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <div class="footer-logo">
+        <img src="img/logo.png" alt="Enviagora Logo">
+        <span style="font-size: 1.2rem; font-weight: bold;">Enviagora</span>
+      </div>
+      <p>Plataforma de RH com Psicometria e IA para empresas que buscam os melhores talentos.</p>
+      <div class="footer-social">
+        <a href="#" title="LinkedIn">💼</a>
+        <a href="#" title="Instagram">📷</a>
+        <a href="#" title="Facebook">📘</a>
+        <a href="#" title="Twitter">🐦</a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h3>Plataforma</h3>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="vagas.html">Vagas</a>
+      <a href="candidatos.html">Candidatos</a>
+      <a href="testes.html">Testes</a>
+      <a href="relatorio.html">Relatórios</a>
+      <a href="ChatAssistente.html">Chat Assistente</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Empresa</h3>
+      <a href="organograma.html">Organograma</a>
+      <a href="Configuracoes.html">Configurações</a>
+      <a href="#">Sobre Nós</a>
+      <a href="#">Contato</a>
+      <a href="#">Suporte</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Recursos</h3>
+      <a href="#">DISC + Eneagrama</a>
+      <a href="#">16 Personalidades</a>
+      <a href="#">Match IA</a>
+      <a href="#">Relatórios PDF</a>
+      <a href="#">Integração API</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Enviagora RH. Todos os direitos reservados. | Desenvolvido com ❤️ para RH do futuro.</p>
+  </div>
+</footer>
+
+<script>
+function startMBTI() {
+  alert('Funcionalidade: Iniciar teste 16 Personalidades\n\nEm breve será implementado o teste completo com:\n- 60 questões MBTI\n- Análise das 4 dimensões\n- Identificação do tipo exato\n- Relatório detalhado\n- Recomendações de carreira');
+}
+
+function viewSampleReport() {
+  alert('Funcionalidade: Visualizar relatório exemplo\n\nO relatório incluirá:\n- Tipo MBTI identificado\n- Descrição completa do perfil\n- Pontuações em cada dimensão\n- Carreiras compatíveis\n- Pontos fortes e desafios\n- Sugestões de desenvolvimento');
+}
+</script>
+
+<script src="app.js"></script>
+</body>
+</html>

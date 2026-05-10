@@ -1,0 +1,41 @@
+name: Deploy Web
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy-web:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 📦 Install PNPM
+        run: npm install -g pnpm
+
+      - name: 📥 Install dependencies
+        run: pnpm install
+
+      - name: 🏗 Build
+        run: pnpm build
+
+      - name: 🚀 Deploy to Vercel
+        run: |
+          pnpm dlx vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: 📦 Upload Sentry Source Maps (opcional)
+        if: success()
+        run: |
+          npx sentry-cli releases new $SENTRY_RELEASE
+          npx sentry-cli releases files $SENTRY_RELEASE upload-sourcemaps .next
+          npx sentry-cli releases finalize $SENTRY_RELEASE
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_RELEASE: ${{ github.sha }}
